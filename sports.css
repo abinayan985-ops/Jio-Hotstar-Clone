@@ -13,11 +13,12 @@ body {
 }
 
 .logo img {
-    width: 45px;
-    height: 45px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     margin-bottom: 30px;
     background-color: transparent;
+    background-color: blur 2px;
 }
 
 .app-container {
@@ -136,17 +137,17 @@ width: 200%;
 } */
 .slider-wrapper {
     width: 100%;
-    height: 400px;       
-    border-radius: 12px;
+    height: 200px;       
+    border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     background-color: #121317;
 }
 
 .slides-container {
     display: flex;
     width: 200%;
-    height: 100%;           
+    height: 90%;           
     animation: autoSlide 10s infinite ease;
 }
 
@@ -168,7 +169,7 @@ width: 200%;
 }
 
 .banner-text-box {
-     width: 50%;
+     width: 100%;
       padding: 20px;
        background: #121317;
        display: flex;
@@ -232,15 +233,26 @@ width: 200%;
 100% { transform: translateX(-100%); }
 }
 
+.hero-sticky-wrapper {
+    position: relative;
+    height: 130vh; 
+   
+              
+             
+ top: 0;
+ left: 0;
+  z-index: 1000;  
 
+        
+}
 
 
 
 .hero-slider-box {
     position: relative;
     width: 100%;
-    height: 75vh;
-    min-height: 480px;
+    height: 80vh;
+    min-height: 500px;
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 40px;
@@ -566,11 +578,12 @@ width: 200%;
 
 .card:hover {
     transform: scale(1.08);
-    z-index: 10;
+    z-index: 100;
     overflow: visible;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
     width: 300px;
-    height: 100px;
+    height: 200px;
+     transform: translateY(-15%);
    
 }
 .card:hover .names {
@@ -980,3 +993,402 @@ width: 200%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
+
+.m-top-tabs, 
+.m-ad-banner, 
+.m-hero-slider-container, 
+.m-float, 
+.m-bottom-nav { 
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        background: #0f1014;
+        color: #fff;
+        margin: 0;
+        padding-bottom: 90px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .sidebar {
+        display: none ;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 70px 14px 100px;
+        box-sizing: border-box;
+    }
+.slider-wrapper,.hero-sticky-wrapper{
+    display: none;
+}
+    /* ---------- 1. Top Tabs ---------- */
+    .m-top-tabs {
+        display: flex;
+        flex-direction: row ;
+        gap: 12px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 12px 14px;
+        z-index: 1200;
+        background: #0f1014;
+        box-sizing: border-box;
+    }
+.m-top-tabs p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #e1e3e8;
+}
+    .m-pill {
+        flex: 1;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        text-decoration: none;
+    }
+
+    .m-pill-hotstar { 
+        background: linear-gradient(135deg, #1b3fa8, #7a1fa2); 
+        border: 1px solid #4d7cff; 
+    }
+
+    .m-pill-tadka { 
+        background: linear-gradient(90deg, #ff1f7a, #ff8a00, #ffc400); 
+    }
+
+    .m-pill img { 
+        height: 24px; 
+        object-fit: contain; 
+        max-width: 85%;
+    }
+
+    /* ---------- 2. Top Ad Banner ---------- */
+    .m-ad-banner {
+        display: block;
+        background: #16181f;
+        border-radius: 16px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .m-ad-media img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        padding: 30px auto;
+        margin: 50px auto;
+    }
+
+    .m-ad-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 14px;
+    }
+
+    .m-ad-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .m-ad-brand img {
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+    }
+
+    .m-ad-text {
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .m-ad-badge {
+        background: #f5c04a;
+        color: #000;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 1px 4px;
+        border-radius: 3px;
+        margin-right: 4px;
+    }
+
+    .m-ad-text p {
+        font-size: 12px;
+        color: #8f98b2;
+        margin: 2px 0 0;
+    }
+
+    .m-ad-btn {
+        background: #282a36;
+        color: #fff;
+        padding: 8px 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    /* ---------- 3. Mobile Hero Single Container Slider ---------- */
+    .m-hero-slider-container {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+
+    .m-hero-slider-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .m-slides-wrapper {
+        display: flex;
+        width: 100%;
+    }
+
+    .m-slide-item {
+        position: relative;
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .m-slide-item img {
+        width: 100%;
+        height: 460px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Live & Tag Overlay */
+    .m-live-tag {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        background: rgba(0, 0, 0, 0.65);
+        backdrop-filter: blur(6px);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 6px 12px;
+        border-radius: 20px;
+        z-index: 2;
+    }
+
+    .m-live-tag i { 
+        color: #ef4444; 
+        margin-right: 4px; 
+        font-size: 8px; 
+    }
+
+    .m-tag-new { background: rgba(59, 130, 246, 0.8); }
+    .m-tag-trending { background: rgba(234, 179, 8, 0.8); color: #000; }
+
+    /* HIDE TEXT DETAILS INSIDE HERO OVERLAY */
+    .m-match-details-text, 
+    .m-match-title, 
+    .m-sub-title, 
+    .m-match-desc, 
+    .m-match-meta, 
+    .m-match-status {
+        display:block;
+    }
+    .m-match-title img{
+        width: 50%;
+        height: 50%;
+        border-radius: 10px;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    .m-match-meta{
+        font-size: 18px;
+        color: #323846;
+    }
+
+    /* Content Overlay (Shows only Action Buttons) */
+    .m-hero-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px 16px 16px;
+        background: linear-gradient(to top, rgba(15, 16, 20, 0.95) 10%, rgba(15, 16, 20, 0.5) 60%, transparent 100%);
+    }
+
+    /* Action Buttons */
+    .m-hero-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .m-btn-watch {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        padding: 12px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .m-btn-ask {
+        width: 38%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        background: linear-gradient(135deg, #16307f, #4a1d7a);
+        border: 1px solid rgba(120, 140, 255, 0.4);
+        color: #fff;
+        padding: 12px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .m-btn-plus {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    /* ---------- 4. Floating Action Bar ---------- */
+    .m-float { 
+        display: flex ; 
+        position: fixed; 
+        left: 14px; 
+        right: 14px; 
+        bottom: 78px; 
+        justify-content: space-between; 
+        align-items: center; 
+        z-index: 1100; 
+        pointer-events: none; 
+    }
+
+    .m-float > * { pointer-events: auto; }
+
+    .m-cats { 
+        display: flex; 
+        align-items: center; 
+        padding: 0 8px; 
+        height: 52px; 
+        border-radius: 26px; 
+        background: linear-gradient(90deg, #1a2a6c, #4a1d7a); 
+        border: 1px solid rgba(120,140,255,.4); 
+        box-shadow: 0 6px 20px rgba(0,0,0,.6); 
+    }
+
+    .m-cats a { 
+        color: #fff; 
+        text-decoration: none; 
+        font-size: 16px; 
+        font-weight: 600; 
+        padding: 0 14px; 
+    }
+
+    .m-cats a + a { border-left: 1px solid rgba(255,255,255,.2); }
+
+    .m-mic { 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        color: #fff; 
+        text-decoration: none; 
+        background: linear-gradient(135deg, #16307f, #4a1d7a); 
+        border: 1px solid rgba(120,140,255,.4); 
+        box-shadow: 0 6px 20px rgba(0,0,0,.6); 
+        width: 52px; 
+        height: 52px; 
+        border-radius: 50%; 
+    }
+
+    .m-ask { 
+        display: none; 
+        position: absolute; 
+        right: 0; 
+        height: 52px; 
+        padding: 0 24px; 
+        border-radius: 26px; 
+        font-size: 18px; 
+        font-weight: 600; 
+        color: #fff; 
+        text-decoration: none; 
+        background: linear-gradient(135deg, #16307f, #4a1d7a); 
+        border: 1px solid rgba(120,140,255,.4); 
+    }
+
+    /* ---------- 5. Bottom Navigation ---------- */
+    .m-bottom-nav { 
+        display: flex ; 
+        position: fixed; 
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+        height: 70px; 
+        justify-content: space-around; 
+        align-items: center; 
+        background: #0f1014; 
+        border-top: 1px solid #1e2029; 
+        z-index: 1300; 
+    }
+
+    .m-bottom-nav a { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 4px; 
+        color: #8f98b2; 
+        text-decoration: none; 
+        font-size: 0; 
+        font-weight: 600; 
+    }
+
+    .m-bottom-nav a i { font-size: 22px; }
+    .m-bottom-nav a.active { color: #fff; }
+
+    .m-avatar { 
+        position: relative; 
+        width: 32px; 
+        height: 32px; 
+        border-radius: 50%; 
+        background: linear-gradient(135deg, #7c3aed, #3b82f6); 
+    }
+}
+.m-bottom-nav img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
